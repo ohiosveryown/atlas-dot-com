@@ -8,12 +8,18 @@
   @import "~static/style/grid.scss";
 
   button {
-    padding: 0.8rem 1.6rem 0.9rem;
+    padding: 0.6rem 1.6rem 0.7rem;
     border-radius: 100px;
     color: #fff;
-    font-weight: 200 !important;
+    font-weight: 500;
     text-transform: capitalize;
     transition: filter 300ms ease;
+  }
+
+  @media (pointer: fine) {
+    button:hover {
+      filter: hue-rotate(20deg);
+    }
   }
 
   .primary {
@@ -22,12 +28,6 @@
 
   .secondary {
     background: red;
-  }
-
-  @media (pointer: fine) {
-    button:hover {
-      filter: hue-rotate(20deg);
-    }
   }
 </style>
 

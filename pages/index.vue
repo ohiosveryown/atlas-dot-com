@@ -1,6 +1,12 @@
 <template>
   <div class="width app">
-    test...
+    <HeaderLarge
+      class="width"
+      heading="Give your customers superhuman support"
+      subheading="Atlas is a blazingly fast, modern support platform, helping identify and diagnose customer experience and interaction."
+    />
+
+    <hr />
     <btn :type="{ primary: true }" content="button label" />
 
     <h1 class="fs-xxl">

@@ -23,6 +23,13 @@
   }
 }
 
+.app {
+  padding-top: 4rem;
+  @include breakpoint(md) {
+    padding-top: 8rem;
+  }
+}
+
 .width {
   position: relative;
   margin: 0 auto;
