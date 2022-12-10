@@ -1,6 +1,39 @@
 <template>
   <nav>
-    <!-- large main -->
+    <!-- nav small -->
+    <div class="nav-sm color--dark">
+      <div class="home">
+        <nuxt-link to="/">
+          <logo class="logo" />
+        </nuxt-link>
+      </div>
+
+      <div @click="toggleMenu(), (navOpen = !navOpen)" class="hamburger">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="17"
+          fill="none"
+        >
+          <path
+            fill="#fff"
+            fill-rule="evenodd"
+            d="M0 1.736a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1Zm0 7a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1Zm1 6a1 1 0 0 0 0 2h18a1 1 0 1 0 0-2H1Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </div>
+
+      <menu ref="menuSm">
+        <ul>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+      </menu>
+    </div>
+
+    <!-- nav large -->
     <div class="nav-lg color--dark width">
       <div class="home">
         <nuxt-link to="/">
@@ -51,6 +84,49 @@
   .logo {
     transform: scale(0.72) translateY(0.3rem);
     transform-origin: left;
+  }
+
+  /* navigation < md */
+  .nav-sm {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 88vw;
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  .nav-sm menu {
+    border: 1px solid green;
+    pointer-events: none;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    /* left: -6vw;
+    width: 106vw; */
+    background: linear-gradient(#05020d, rgba(5, 2, 13, 0.4));
+    backdrop-filter: blur(22px);
+    transform: translateY(-3rem) scaleY(0.75);
+    transform-origin: top;
+    transition: opacity 200ms ease, transform 10ms ease 201ms;
+    opacity: 0;
+  }
+
+  .menu-sm--open {
+    pointer-events: inherit !important;
+    transform: translateY(0) scaleY(1) !important;
+    opacity: 1 !important;
+    transition: opacity 300ms ease, transform 200ms ease !important;
+  }
+
+  .nav-sm menu ul {
+    border: 1px solid red;
+    margin: 0 auto;
+    width: 88%;
   }
 
   /* navigation ≥ md */
@@ -113,5 +189,19 @@
 </style>
 
 <script>
-  export default {}
+  export default {
+    data: () => ({
+      navOpen: false,
+    }),
+    methods: {
+      toggleMenu() {
+        this.$refs.menuSm.classList.toggle("menu-sm--open")
+      },
+    },
+    watch: {
+      $route() {
+        this.$refs.menuSm.classList.remove("menu-sm--open")
+      },
+    },
+  }
 </script>
