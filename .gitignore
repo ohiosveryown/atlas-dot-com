@@ -6,6 +6,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.nova
+.zip
+.editorconfig
+.github
 
 # Runtime data
 pids
