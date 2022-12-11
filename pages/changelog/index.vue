@@ -11,8 +11,8 @@
         <section>
           <aside>
             <div class="aside-wrapper">
-              <header class="inter">{{ article.name }}</header>
-              <p class="dark">{{ formatDate(article.createdAt) }}</p>
+              <header class="fs-sm inter">{{ article.name }}</header>
+              <p class="color--v-dark">{{ formatDate(article.createdAt) }}</p>
             </div>
           </aside>
 
@@ -35,9 +35,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4rem auto 4rem;
+    margin: 0 auto 4rem;
     @include breakpoint(md) {
-      margin: 8rem auto 6.4rem;
+      margin: 0 auto 6.4rem;
       width: grid-width(6);
     }
     @include breakpoint(xl) {
@@ -54,6 +54,7 @@
       border-left: 1px solid #591bdd;
     }
   }
+
   section {
     display: flex;
     flex-direction: column;

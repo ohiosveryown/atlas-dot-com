@@ -1,0 +1,87 @@
+@import "~/static/style/grid.scss";
+
+.feature-article,
+.changelog-article {
+  margin-bottom: 6.4rem;
+  @include breakpoint(md) {
+    margin: 0 auto 0;
+    width: grid-width(9);
+  }
+
+  .hero {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 3.2rem;
+    padding: 1.2rem;
+    background: linear-gradient(
+      135deg,
+      rgba(58, 51, 73, 1) 2%,
+      rgba(58, 51, 73, 0.22) 88%
+    );
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.75),
+      0px 12px 10px rgba(0, 0, 0, 0.375), inset 0px 1px 1px #5c546c;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+      margin-bottom: 4.8rem;
+      padding: 4rem;
+    }
+    img {
+      border-radius: 8px;
+    }
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+    background: linear-gradient(180deg, #ffffff 0%, #d0c4e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include breakpoint(md) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  h4 {
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    background: linear-gradient(180deg, #ffffff 0%, #d0c4e7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include breakpoint(md) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  ul,
+  p {
+    margin-bottom: 2rem;
+    font-size: 1.9rem;
+    color: #dfe0e2;
+    @include breakpoint(md) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  li {
+    margin-left: 2.4rem;
+    list-style: initial;
+  }
+
+  a {
+    color: #a5a5ff;
+    text-decoration: underline;
+    transition: var(--ease);
+  }
+
+  @media (pointer: fine) {
+    a:hover {
+      color: #dfe0e2;
+      text-decoration: none;
+    }
+  }
+}

@@ -29,7 +29,7 @@
       </section>
 
       <section class="app-preview">
-        <HeaderMedium
+        <HeaderSmall
           class="tac width--seven"
           heading="Customer Centric Productivity"
           subheading="Build relationships with your customers by seeing them in their full context.
@@ -40,7 +40,7 @@
       </section>
 
       <section class="ux">
-        <HeaderMedium
+        <HeaderSmall
           class="tac width--seven"
           heading="A Modern Tool with a Modern User Experience"
           subheading="Finally a fast, simple UI. Rich hotkeys, a command palette, and AI accelerated productivity tools."

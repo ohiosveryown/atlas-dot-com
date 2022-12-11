@@ -1,9 +1,9 @@
 <template>
   <header>
-    <h2 class="inter">
+    <h2 class="inter fs-lg">
       {{ heading }}
     </h2>
-    <h3 class="founders color--v-dark">
+    <h3 class="founders fs-lg color--v-dark">
       {{ subheading }}
     </h3>
   </header>
@@ -14,16 +14,13 @@
 
   h2 {
     padding-bottom: 1.6rem;
-    font-size: 2.8rem;
-    line-height: 1.2;
     background: linear-gradient(180deg, #ffffff 0%, #d0c4e7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     @include breakpoint(md) {
       padding-bottom: 1.6rem;
-      font-size: 4.2rem;
-      line-height: 1;
+      line-height: 1.1;
     }
   }
 
@@ -33,8 +30,8 @@
     line-height: 1.1;
 
     @include breakpoint(md) {
-      font-size: 3.2rem;
-      line-height: 1.1;
+      font-size: 2.8rem;
+      line-height: 1;
     }
   }
 </style>
