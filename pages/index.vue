@@ -6,11 +6,23 @@
       subheading="Atlas is a blazingly fast, modern support platform, helping identify and diagnose customer experience and interaction."
     />
 
-    <card
-      name="session recording rm"
-      description="rm – A video is worth a thousand words. Let your customers show you rather then tell you with session recording."
-      hero="https://media.getatlas.io/features/session-replay.png"
-    />
+    <figure class="skew-enter">
+      <img
+        src="https://atlas-www-assets.s3.amazonaws.com/hero--customer-profile.png"
+        alt="Atlas – Customer Profile Page"
+      />
+    </figure>
+
+    <section class="skew-enter features">
+      <ul v-for="feature of features" :key="feature.slug">
+        <card
+          :icon="`${feature.icon}`"
+          :name="`${feature.name}`"
+          :description="`${feature.description}`"
+          :hero="`${feature.hero}`"
+        />
+      </ul>
+    </section>
   </div>
 </template>
 
@@ -19,5 +31,19 @@
 </style>
 
 <script>
-  export default {}
+  import { skewEnter } from "../logic/anim.js"
+  export default {
+    data: () => ({
+      features: null,
+    }),
+    async fetch() {
+      this.features = await this.$content("features", { deep: true })
+        .sortBy("title", "desc")
+        // .where({ type: "customer centric" })
+        .fetch()
+    },
+    mounted() {
+      skewEnter()
+    },
+  }
 </script>

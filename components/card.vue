@@ -1,12 +1,12 @@
 <template>
-  <div class="wrapper">
+  <li class="wrapper">
     <header>
       <img class="icon" :src="icon" alt="" />
       <h3 class="name inter fs-md">{{ name }}</h3>
     </header>
     <p class="description">{{ description }}</p>
     <img class="hero" :src="hero" alt="" />
-  </div>
+  </li>
 </template>
 
 <style lang="scss" scoped>
