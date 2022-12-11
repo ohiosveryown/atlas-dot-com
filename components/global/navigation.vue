@@ -8,7 +8,10 @@
         </nuxt-link>
       </div>
 
-      <div @click="toggleMenu(), (navOpen = !navOpen)" class="hamburger">
+      <div
+        @click=";(navOpen = !navOpen), [navOpen ? showList() : hideList()]"
+        class="hamburger"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="20"
@@ -24,12 +27,25 @@
         </svg>
       </div>
 
-      <menu ref="menuSm">
-        <ul>
-          <li>Item</li>
-          <li>Item</li>
-          <li>Item</li>
+      <menu class="menuSm" ref="menuSm">
+        <ul class="color--dark">
+          <li><nuxt-link to="/features">Features</nuxt-link></li>
+          <li><nuxt-link to="/pricing">Pricing</nuxt-link></li>
+          <li><nuxt-link to="/changelog">Changelog</nuxt-link></li>
+          <li><nuxt-link to="/about">About</nuxt-link></li>
         </ul>
+
+        <footer>
+          <ul>
+            <li>
+              <nuxt-link class="button" to="/"
+                ><btn :type="{ primary: true }" content="sign up"
+              /></nuxt-link>
+            </li>
+
+            <li class="login">Existing user? Log in</li>
+          </ul>
+        </footer>
       </menu>
     </div>
 
@@ -99,34 +115,54 @@
   }
 
   .nav-sm menu {
-    border: 1px solid green;
     pointer-events: none;
     position: absolute;
     top: 34px;
     left: 0;
     width: 100%;
+    border-radius: 0 0 15px 15px;
     padding: 0;
-    /* left: -6vw;
-    width: 106vw; */
     background: linear-gradient(#05020d, rgba(5, 2, 13, 0.4));
     backdrop-filter: blur(22px);
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.8),
+      0px 12px 10px rgba(0, 0, 0, 0.4);
     transform: translateY(-3rem) scaleY(0.75);
     transform-origin: top;
-    transition: opacity 200ms ease, transform 10ms ease 201ms;
+    /* transition: opacity 200ms ease, transform 10ms ease 201ms; */
     opacity: 0;
   }
 
-  .menu-sm--open {
-    pointer-events: inherit !important;
-    transform: translateY(0) scaleY(1) !important;
-    opacity: 1 !important;
-    transition: opacity 300ms ease, transform 200ms ease !important;
-  }
-
   .nav-sm menu ul {
-    border: 1px solid red;
     margin: 0 auto;
     width: 88%;
+  }
+
+  .nav-sm menu li {
+    padding: 2rem 1.2rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+    font-size: 2rem;
+  }
+
+  .nav-sm footer {
+    padding: 2rem 0 3.2rem;
+  }
+
+  .nav-sm footer li {
+    border-bottom: none;
+    padding: 1.2rem 1.2rem;
+  }
+
+  .nav-sm footer li button {
+    width: 100%;
+    padding: 1.4rem 0;
+    font-size: 1.8rem;
+  }
+
+  .nav-sm footer .login {
+    padding: 0.6rem 0 0 0;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #8e879f;
   }
 
   /* navigation ≥ md */
@@ -193,14 +229,40 @@
     data: () => ({
       navOpen: false,
     }),
+
     methods: {
-      toggleMenu() {
-        this.$refs.menuSm.classList.toggle("menu-sm--open")
+      showList() {
+        const tl = gsap.timeline()
+        tl.to(this.$refs.menuSm, {
+          opacity: 1,
+          y: 0,
+          scaleY: 1,
+          duration: 0.8,
+          ease: Elastic.easeOut.config(1, 0.5),
+          pointerEvents: "inherit",
+        })
+      },
+      hideList() {
+        const tl = gsap.timeline()
+        tl.to(this.$refs.menuSm, {
+          opacity: 0,
+          duration: 0.3,
+          ease: Power4.easeOut,
+        })
+        tl.to(this.$refs.menuSm, {
+          y: "-3rem",
+          scaleY: 0.75,
+          duration: 0.4,
+          ease: Power4.easeOut,
+          pointerEvents: "none",
+        })
       },
     },
     watch: {
       $route() {
-        this.$refs.menuSm.classList.remove("menu-sm--open")
+        this.navOpen = false
+        this.hideList()
+        // this.$refs.menuSm.classList.remove("menu-sm--open")
       },
     },
   }
