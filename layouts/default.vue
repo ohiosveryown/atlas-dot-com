@@ -2,6 +2,7 @@
   <div>
     <navigation />
     <nuxt />
+    <foot />
   </div>
 </template>
 

@@ -16,8 +16,33 @@
   color: #dfe0e2;
 }
 
+.color--v-dark {
+  color: #c7c3cd;
+}
+
 .color--light-blue {
   color: #a5a5ff;
+}
+
+.width--six {
+  @include breakpoint(mdl) {
+    margin: auto;
+    width: grid-width(6);
+  }
+}
+
+.width--seven {
+  @include breakpoint(mdl) {
+    margin: auto;
+    width: grid-width(7);
+  }
+}
+
+.width--eight {
+  @include breakpoint(mdl) {
+    margin: auto;
+    width: grid-width(8);
+  }
 }
 
 .pointer {
