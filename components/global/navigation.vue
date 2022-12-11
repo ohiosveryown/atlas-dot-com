@@ -8,6 +8,7 @@
         </nuxt-link>
       </div>
 
+      <!-- hamburger -->
       <div
         @click=";(navOpen = !navOpen), [navOpen ? showList() : hideList()]"
         class="hamburger"
@@ -27,6 +28,7 @@
         </svg>
       </div>
 
+      <!-- menu -->
       <menu class="menuSm" ref="menuSm">
         <ul class="color--dark">
           <li><nuxt-link to="/features">Features</nuxt-link></li>
@@ -38,12 +40,19 @@
         <footer>
           <ul>
             <li>
-              <nuxt-link class="button" to="/"
-                ><btn :type="{ primary: true }" content="sign up"
-              /></nuxt-link>
+              <a class="button" href="https://app.getatlas.io/auth/signup">
+                <btn :type="{ primary: true }" content="sign up" />
+              </a>
             </li>
 
-            <li class="login">Existing user? Log in</li>
+            <li class="login">
+              Existing user?
+              <a
+                class="color--light-blue"
+                href="https://app.getatlas.io/auth/login?next=/"
+                >Log in</a
+              >
+            </li>
           </ul>
         </footer>
       </menu>
@@ -67,11 +76,11 @@
       <div class="rule" />
 
       <ul class="fs-xs buttons">
-        <li><nuxt-link to="/features">Log In</nuxt-link></li>
+        <li><a href="https://app.getatlas.io/auth/login?next=/">Log In</a></li>
         <li>
-          <nuxt-link class="button" to="/"
+          <a class="button" href="https://app.getatlas.io/auth/signup"
             ><btn :type="{ primary: true }" content="sign up"
-          /></nuxt-link>
+          /></a>
         </li>
       </ul>
     </div>
@@ -138,7 +147,7 @@
   }
 
   .nav-sm menu li {
-    padding: 2rem 1.2rem;
+    padding: 2rem 0rem;
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
     font-size: 2rem;
   }
@@ -159,7 +168,7 @@
   }
 
   .nav-sm footer .login {
-    padding: 0.6rem 0 0 0;
+    padding: 0.8rem 0 0 0;
     text-align: center;
     font-size: 1.6rem;
     color: #8e879f;
@@ -262,7 +271,6 @@
       $route() {
         this.navOpen = false
         this.hideList()
-        // this.$refs.menuSm.classList.remove("menu-sm--open")
       },
     },
   }
