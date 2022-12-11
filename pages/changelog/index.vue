@@ -66,9 +66,13 @@
   }
 
   .aside-wrapper {
-    top: 0;
-    height: 9vh;
+    margin-bottom: 1.6rem;
     align-self: flex-start;
+    @include breakpoint(md) {
+      top: 0;
+      height: 9vh;
+      margin-bottom: 0;
+    }
   }
 
   aside {
@@ -81,10 +85,11 @@
       background: none;
       width: grid-width(4);
     }
+    header {
+      margin-bottom: 0.4rem;
+    }
     p {
-      @include breakpoint(md) {
-        font-size: 1.5rem;
-      }
+      font-size: 1.5rem;
     }
   }
 

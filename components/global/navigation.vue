@@ -131,7 +131,7 @@
     width: 100%;
     border-radius: 0 0 15px 15px;
     padding: 0;
-    background: linear-gradient(#05020d, rgba(5, 2, 13, 0.4));
+    background: linear-gradient(#05020d, rgba(5, 2, 13, 0.64));
     backdrop-filter: blur(22px);
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.8),
       0px 12px 10px rgba(0, 0, 0, 0.4);
