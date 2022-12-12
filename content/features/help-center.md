@@ -3,7 +3,7 @@ emoji: "🛟"
 icon: "https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
 name: "Help Center"
 header: "Help Center in Your Brand"
-description: "Set up guides and articles to help your customers become pro’s with your product’s offering – all in your company’s brand."
+description: "A video is worth a thousand words. Let your customers show you rather than tell you with session recording."
 hero: "https://atlas-www-assets.s3.amazonaws.com/hero--help-center.png"
 type: "all in one"
 ---
