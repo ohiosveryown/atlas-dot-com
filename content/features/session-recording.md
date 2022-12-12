@@ -5,7 +5,7 @@ name: "Session Replay"
 header: "Pixel Perfect Replay"
 description: "A video is worth a thousand words. Let your customers show you rather than tell you with session recording."
 hero: "https://atlas-www-assets.s3.amazonaws.com/hero--session-replay.png"
-type: "customer centric"
+type: "all in one"
 ---
 
 ### What is session replay?

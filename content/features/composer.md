@@ -7,7 +7,7 @@ description:
   "Convert your customer conversations into data driven insights, driving your product and
   engineering roadmaps."
 hero: "https://atlas-www-assets.s3.amazonaws.com/hero--help-center.png"
-type: "all in one"
+type: "customer centric"
 ---
 
 ### Help center for end users
