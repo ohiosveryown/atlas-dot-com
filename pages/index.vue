@@ -17,14 +17,19 @@
 
     <main class="skew-enter">
       <section class="features">
-        <ul v-for="feature of features" :key="feature.slug">
-          <card
-            class="rm"
-            :icon="`${feature.icon}`"
-            :name="`${feature.name}`"
-            :description="`${feature.description}`"
-            :hero="`${feature.hero}`"
-          />
+        <ul class="row-one">
+          <nuxt-link
+            v-for="feature of featuresRow"
+            :key="feature.slug"
+            :to="'/features/' + feature.slug"
+          >
+            <card
+              :icon="`${feature.icon}`"
+              :name="`${feature.name}`"
+              :description="`${feature.description}`"
+              :hero="`${feature.hero}`"
+            />
+          </nuxt-link>
         </ul>
       </section>
 
@@ -49,18 +54,21 @@
         <ul>
           <card
             emoji="⌨️"
-            name="Designed for the Keyboard"
+            icon="https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
+            name="Keyboard 1st"
             description="Know your customers most pressing and time sensitive issues."
           />
 
           <card
             emoji="🧰"
+            icon="https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
             name="Command Menu"
             description="Know your customers most pressing and time sensitive issues."
           />
 
           <card
             emoji="🔍"
+            icon="https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
             name="Search"
             description="Know your customers most pressing and time sensitive issues."
           />
@@ -80,8 +88,31 @@
 <style lang="scss" scoped>
   @import "~static/style/grid.scss";
 
-  .rm {
-    width: 30rem;
+  .row-one {
+    @include breakpoint(md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    a:nth-of-type(1) {
+      @include breakpoint(md) {
+        width: grid-width(3);
+      }
+    }
+
+    a:nth-of-type(2) {
+      @include breakpoint(md) {
+        width: grid-width(3);
+      }
+    }
+
+    a:nth-of-type(3) {
+      @include breakpoint(md) {
+        display: block;
+        width: grid-width(5);
+      }
+    }
   }
 
   section.hero,
@@ -132,12 +163,13 @@
   import { skewEnter } from "../logic/anim.js"
   export default {
     data: () => ({
-      features: null,
+      featuresRow: null,
     }),
     async fetch() {
-      this.features = await this.$content("features", { deep: true })
+      this.featuresRow = await this.$content("features", { deep: true })
         .sortBy("title", "desc")
-        .where({ type: "customer centric" })
+        .limit(3)
+        // .where({ type: "customer centric" })
         .fetch()
     },
 

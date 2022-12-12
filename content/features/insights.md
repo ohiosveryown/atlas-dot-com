@@ -1,9 +1,11 @@
 ---
-emoji: "🛟"
+emoji: "🔮"
 icon: "https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
-name: "Help Center"
-header: "Help Center in Your Brand"
-description: "Set up guides and articles to help your customers become pro’s with your product’s offering – all in your company’s brand."
+name: "Insights"
+header: "Smarter Insights"
+description:
+  "Convert your customer conversations into data driven insights, driving your product and
+  engineering roadmaps."
 hero: "https://atlas-www-assets.s3.amazonaws.com/hero--help-center.png"
 type: "all in one"
 ---
