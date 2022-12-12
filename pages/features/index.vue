@@ -98,7 +98,21 @@
         .where({ type: "customer centric" })
         .fetch()
     },
-    methods: {},
-    mounted() {},
+
+    methods: {
+      fadeIn() {
+        gsap.from(".app", {
+          opacity: 0,
+          duration: 1.2,
+          delay: 0.15,
+          stagger: 0.15,
+          ease: Power4.easeOut,
+        })
+      },
+    },
+
+    mounted() {
+      this.fadeIn()
+    },
   }
 </script>

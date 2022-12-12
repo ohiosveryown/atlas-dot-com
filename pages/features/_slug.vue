@@ -3,8 +3,10 @@
     <main>
       <header>
         <img class="icon" :src="`${article.icon}`" />
-        <h1 class="inter fs-xl tac">{{ article.name }}</h1>
-        <h2 class="founders fs-lg tac dark">{{ article.subheader }}</h2>
+        <h1 class="inter fs-lg tac">{{ article.name }}</h1>
+        <h2 class="founders fs-lg tac color--v-dark">
+          {{ article.description }}
+        </h2>
       </header>
 
       <figure class="hero">
@@ -25,10 +27,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4rem auto 4rem;
+    margin: 0 auto 4rem;
     @include breakpoint(md) {
-      margin: 8rem auto 6.4rem;
-      width: grid-width(6);
+      margin: 0 auto 6.4rem;
+      width: grid-width(8);
     }
     .icon {
       margin-bottom: 1.8rem;

@@ -43,6 +43,7 @@
         })
       },
     },
+
     mounted() {
       this.fadeIn()
     },
