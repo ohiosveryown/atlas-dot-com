@@ -1,6 +1,6 @@
 ---
 emoji: "📬"
-icon: "https://atlas-www-assets.s3.amazonaws.com/icon--session-replay.png"
+icon: "https://atlas-www-assets.s3.amazonaws.com/icon--inbox.png"
 name: "Inbox"
 header: "Custom Inboxes"
 description: "A video is worth a thousand words. Let your customers show you rather than tell you with session recording."

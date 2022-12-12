@@ -1,6 +1,6 @@
 ---
 emoji: "📲"
-icon: "https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
+icon: "https://atlas-www-assets.s3.amazonaws.com/icon--composer.png"
 name: "Composer"
 header: "Multichannel Composer"
 description:

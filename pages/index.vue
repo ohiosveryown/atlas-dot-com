@@ -17,6 +17,12 @@
 
     <main class="skew-enter">
       <section class="features">
+        <HeaderSmall
+          class="enter"
+          heading="A suite of support products"
+          subheading="All of the best-in-class, fully integrated support tools."
+        />
+
         <ul class="row-one">
           <nuxt-link
             v-for="feature of featuresRow"
@@ -54,21 +60,21 @@
         <ul>
           <card
             emoji="⌨️"
-            icon="https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
-            name="Keyboard 1st"
+            icon="https://atlas-www-assets.s3.amazonaws.com/icon--keyboard.png"
+            name="Keyboard First"
             description="Know your customers most pressing and time sensitive issues."
           />
 
           <card
             emoji="🧰"
-            icon="https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
+            icon="https://atlas-www-assets.s3.amazonaws.com/icon--command-menu.png"
             name="Command Menu"
             description="Know your customers most pressing and time sensitive issues."
           />
 
           <card
             emoji="🔍"
-            icon="https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
+            icon="https://atlas-www-assets.s3.amazonaws.com/icon--search.png"
             name="Search"
             description="Know your customers most pressing and time sensitive issues."
           />
@@ -132,6 +138,14 @@
     margin-bottom: 2.4rem;
     @include breakpoint(md) {
       margin-bottom: 3.2rem;
+    }
+  }
+
+  section.features header {
+    text-align: center;
+    @include breakpoint(mdl) {
+      /* margin: 0 auto;
+      width: grid-width(4.5); */
     }
   }
 

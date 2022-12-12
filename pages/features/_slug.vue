@@ -32,6 +32,9 @@
       margin: 0 auto 6.4rem;
       width: grid-width(8);
     }
+    @include breakpoint(mdl) {
+      width: grid-width(6.4);
+    }
     .icon {
       margin-bottom: 1.8rem;
       width: 5.6rem;

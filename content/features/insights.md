@@ -1,6 +1,6 @@
 ---
 emoji: "🔮"
-icon: "https://atlas-www-assets.s3.amazonaws.com/icon--help-center.png"
+icon: "https://atlas-www-assets.s3.amazonaws.com/icon--insights.png"
 name: "Insights"
 header: "Smarter Insights"
 description:

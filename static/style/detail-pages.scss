@@ -2,6 +2,8 @@
 
 .feature-article,
 .changelog-article {
+  position: relative;
+  z-index: var(--z2);
   margin-bottom: 6.4rem;
   @include breakpoint(md) {
     margin: 0 auto 0;
