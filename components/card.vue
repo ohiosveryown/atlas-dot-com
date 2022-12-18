@@ -37,7 +37,7 @@
 
   .icon {
     margin: 0 1.2rem 0.6rem 0;
-    width: 4.8rem;
+    width: 4rem;
   }
 
   header {

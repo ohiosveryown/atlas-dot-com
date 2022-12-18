@@ -7,13 +7,114 @@
     />
 
     <main class="width">
-      <card-pricing />
+      <section class="pricing-cards">
+        <card-pricing />
+      </section>
+
+      <section class="signup">
+        <signup
+          heading="Have Questions?"
+          subheading="Schedule a chat with out co-founder to get the answers you need."
+        />
+      </section>
+
+      <section class="table">
+        <table>
+          <tr class="sticky">
+            <th style="opacity: 0.1">RM</th>
+            <th class="tal">Startup</th>
+            <th class="tal">Growth</th>
+            <th class="tal">Enterprise</th>
+          </tr>
+
+          <tr>
+            <td class="header inter">Ticketing</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Tags and Tag Groups</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+
+          <tr>
+            <td>Set Status</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+
+          <tr>
+            <td>Snooze Tickers</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+
+          <tr>
+            <td>Set Priority</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+
+          <tr>
+            <td>Assign to Teammates</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+
+          <tr>
+            <td>Create Custom Inboxes</td>
+            <td></td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+
+          <tr>
+            <td>Set Macros</td>
+            <td></td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+        </table>
+      </section>
     </main>
   </div>
 </template>
 
 <style lang="scss" scoped>
   @import "~static/style/grid.scss";
+
+  section.table table {
+    width: 100%;
+  }
+
+  table tr.sticky {
+    position: sticky;
+    top: 6.4rem;
+    background: #0b0220;
+  }
+
+  table td.header {
+    font-size: 1.7rem;
+    color: hsla(0, 0%, 100%, 0.7);
+  }
+
+  table td {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
+    font-size: 2rem;
+  }
+
+  section.signup {
+    margin-bottom: 11.2rem;
+  }
 
   .page-header {
     display: flex;

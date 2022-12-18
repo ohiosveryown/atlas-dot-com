@@ -4,7 +4,11 @@
       <section class="left">
         <div>
           <nuxt-link to="/">
-            <logo class="logo" />
+            <img
+              class="logo"
+              src="https://atlas-www-assets.s3.amazonaws.com/logo%403x.png"
+              alt=""
+            />
           </nuxt-link>
 
           <p class="op-7 fs-sm">
@@ -62,6 +66,10 @@
     @include breakpoint(md) {
       padding: 4rem 0;
     }
+  }
+
+  .logo {
+    width: 11rem;
   }
 
   .container {

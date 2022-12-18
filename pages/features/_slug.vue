@@ -23,6 +23,10 @@
 <style lang="scss" scoped>
   @import "~static/style/grid.scss";
 
+  main {
+    margin-bottom: 11.2rem;
+  }
+
   header {
     display: flex;
     flex-direction: column;

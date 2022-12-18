@@ -4,7 +4,11 @@
     <div class="nav-sm color--dark">
       <div class="home">
         <nuxt-link to="/">
-          <logo class="logo" />
+          <img
+            class="logo"
+            src="https://atlas-www-assets.s3.amazonaws.com/logo%403x.png"
+            alt=""
+          />
         </nuxt-link>
       </div>
 
@@ -62,7 +66,11 @@
     <div class="nav-lg color--dark width">
       <div class="home">
         <nuxt-link to="/">
-          <logo class="logo" />
+          <img
+            class="logo"
+            src="https://atlas-www-assets.s3.amazonaws.com/logo%403x.png"
+            alt=""
+          />
         </nuxt-link>
       </div>
 
@@ -107,8 +115,7 @@
   }
 
   .logo {
-    transform: scale(0.72) translateY(0.3rem);
-    transform-origin: left;
+    width: 9.6rem;
   }
 
   /* navigation < md */
