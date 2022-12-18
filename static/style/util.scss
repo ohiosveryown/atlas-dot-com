@@ -25,6 +25,10 @@
   color: #a5a5ff;
 }
 
+.vat {
+  vertical-align: top;
+}
+
 .width--six {
   @include breakpoint(mdl) {
     margin: auto;
